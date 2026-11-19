@@ -8,7 +8,7 @@
 - Docker
 - HTML
 - Kubernetes
-- GitLab CI/CD
+- GitHub Actions
 
 ## Структура проекта
 
