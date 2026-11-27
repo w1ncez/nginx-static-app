@@ -1,4 +1,4 @@
-FROM nginx:stable-alpine
+FROM nginx:1.28.0-alpine
 
 LABEL maintainer="DevOps Diplom Project"
 
