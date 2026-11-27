@@ -95,8 +95,11 @@ jobs:
         run: |
           set -euo pipefail
 
-          kubectl cluster-info
+          echo "Checking access to application namespace..."
 
+          kubectl get deployment nginx-static-app -n diplom
+
+          test "$(kubectl auth can-i get deployments -n diplom)" = "yes"
           test "$(kubectl auth can-i patch deployments -n diplom)" = "yes"
           test "$(kubectl auth can-i delete deployments -n diplom)" = "no"
           test "$(kubectl auth can-i get secrets -n diplom)" = "no"
